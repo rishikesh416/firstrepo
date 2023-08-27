@@ -1,0 +1,22 @@
+<!-- <table class="productTable" border="2">
+    <th *ngFor="let header of productListHeaders">{{header}}</th>
+    <tr *ngFor="let product of productList">
+        <td >{{product.id}}</td>
+        <td >{{product.name}}</td>
+        <td >{{product.price}}</td>
+        <td >{{product.brandName}}</td>
+        <td >{{product.quantity}}</td>
+        <td><button (click)="SellItems(product)">Sell</button></td>
+    </tr>
+</table> -->
+
+
+<ag-grid-angular
+    style="width: 100%; height: 100%"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="productList"
+    [rowSelection]="'multiple'"
+    [animateRows]="true"
+  ></ag-grid-angular>
